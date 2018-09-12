@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function updateList (data) {
+        console.log(data.age)
+    }
+    var doc = document.getElementsByTagName('html')[0];
+    var str = document.createElement('script');
+    str.src = "http://192.168.1.176:8806/JsBase/remote.js?callback=updateList";
+    doc.appendChild(str)
+</script>
+</html>

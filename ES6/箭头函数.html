@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头函数</title>
+</head>
+<body>
+
+</body>
+<script>
+    var b = 1;
+    function a() {
+        let b = 3;
+        let c = () => {
+            console.log(this.b);
+        };
+        c();
+    }
+    a();
+</script>
+</html>

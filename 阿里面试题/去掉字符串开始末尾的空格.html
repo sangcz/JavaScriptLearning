@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>去掉字符串开始末尾的空格</title>
+</head>
+<body>
+
+</body>
+<script>
+    let str = ' 12345xsaazdf ';
+
+    let reg = /^.+\d.+/g
+    let val = str.replace(reg, '')
+    console.log(val)
+</script>
+</html>

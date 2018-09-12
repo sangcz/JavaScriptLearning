@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XMLHttpRequest</title>
+</head>
+<body>
+    <div id="myDiv"></div>
+</body>
+<script>
+    /*
+    * 0 请求未初始化
+    * 1 服务器连接已建立
+    * 2 请求已接收
+    * 3 请求处理中
+    * 4 请求已完成
+    * */
+    if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest();
+    } else {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    console.log(xhr.readyState)
+    xhr.open('GET', 'https://www.easy-mock.com/mock/5b34827e34f6771e1a0fc835/jsonp/test', false)
+    console.log(xhr.readyState)
+    xhr.send()
+    console.log(xhr.readyState)
+
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState)
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById("myDiv").innerHTML = xhr.responseText;
+        }
+        console.log(xhr.readyState)
+    }
+</script>
+</html>

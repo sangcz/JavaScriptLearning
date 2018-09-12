@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li onclick="alert(1)">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+</body>
+<script>
+    const con = document.getElementsByClassName('container')[0];
+    let node = con.cloneNode(true);
+    let Body = document.getElementsByTagName('body')[0];
+    Body.appendChild(node);
+</script>
+</html>

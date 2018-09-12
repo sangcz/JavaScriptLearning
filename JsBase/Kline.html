@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let socketId_1;
+    // 定义socket构造函数
+
+    // socket constructor function
+    function KlineConstructor (periods, socketName) {
+        let _this = this
+        // 5m,15m,30m,1h,6h,1d
+        let message = {
+            type: '2',
+            data: [{
+                'b_coin': 'bch',
+                'v_coin': 'usdt',
+                'periods': this.periods,
+                'data_type': '0'
+            }]
+        }
+        console.log(periods)
+        // Create WebSocket connection.
+        this.socketName = new WebSocket('ws://114.55.27.208:8800')
+        console.log(this.socket)
+        // Connection opened
+        this.socketName.addEventListener('open', function (event) {
+            console.log(message)
+            _this.socketName.send(JSON.stringify(message))
+        })
+
+        // Listen for messages
+        this.socketName.addEventListener('message', function (event) {
+            console.log(event.data)
+            let data = JSON.parse(event.data)
+            // 头部数据
+            let detail = data['detail']
+            // K线数据
+            let kline = data['kline']
+            // 深度行情数据
+            let depth = data['depth']
+            if (kline !== undefined) {
+                _this.chartData.rows = []
+                setTimeout(() => {
+                    _this.chartData.rows = kline
+                }, 50)
+            }
+            if (depth !== undefined) {
+                _this.bid = depth['bids']
+                _this.selling = depth['asks']
+            }
+            if (detail !== undefined) {
+                _this.topData = detail
+            }
+        })
+        //
+        this.closeSocket = function () {
+            return this.socketName.close()
+        }
+    }
+
+    var socket_1 = new KlineConstructor(message, socketId_1)
+    console.log(socket_1.constructor === KlineConstructor)
+    setTimeout(() => {
+        socket_1.closeSocket()
+        console.log('关闭连接!')
+    }, 3000)
+</script>
+</html>

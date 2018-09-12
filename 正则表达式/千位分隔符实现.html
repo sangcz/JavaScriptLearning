@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>千位分隔符实现</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 34,567,907
+	var reg = /^\d{3}$/;
+	'34567907'.replace(/^(\d)(?=\d{3})$/g, '$1,');
+
+</script>
+</html>

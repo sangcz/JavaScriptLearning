@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>构造函数</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Person(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+    }
+    Person.prototype.sayName = function () {
+        alert(this.name)
+    }
+
+    var person1 = new Person('Joy', 26, 'FE');
+    var person2 = new Person('Qiao', 22, 'FE');
+    person1.sayName();
+    person2.sayName();
+    console.log(Person.prototype)
+
+    // Person('Qiao', 22, 'FE');
+    // this.sayName();
+    // console.log(this)
+    // console.log(this === window)
+    //
+    // var o = new Object();
+    // Person.call(o,'Sweet', 26, '运营');
+    // o.sayName();
+</script>
+</html>

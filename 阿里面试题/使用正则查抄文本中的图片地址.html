@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="container">
+        <p>Mac 系统自带Python 2.7，安装 新版本请前往官网下载，安装成功之后，在命令行输入python3 如图：<img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fd345fc46ff4?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=""></p><p>在爬虫中元组和集合很少用到，这里只做简单的介绍; 元组: 类似于列表，但是元组的元素是不能修改只能查看的</p><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fd56858774c8?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="">
+    </div>
+</body>
+<script>
+    var cont = document.getElementById('container').innerHTML;
+    var reg = /<img.*?>/gim;
+    console.log(reg.exec(cont));
+</script>
+</html>

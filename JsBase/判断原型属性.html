@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断原型属性</title>
+</head>
+<body>
+
+</body>
+<script>
+   // var book = {
+   //     title: '《javascript》'
+   // }
+   // function hasPrototypeProperty(object, name) {
+   //     return name in object && !object.hasOwnProperty(name)
+   // }
+   // console.log(hasPrototypeProperty(book, 'title'))
+   // console.log(hasPrototypeProperty(book, 'hasOwnProperty'))
+
+    // var obj = {}
+    // var prototype = Object.getPrototypeOf(obj)
+    // console.log(prototype)
+    // console.log(prototype === Object.prototype)
+
+
+    // function Person(name) {
+    //     this.name = name;
+    // }
+    //
+    // Person.prototype = {
+    //     constructor: Person,
+    //     sayName: function () {
+    //         console.log(this.name)
+    //     },
+    //     toString: function () {
+    //         return "[Person " + this.name +"]";
+    //     }
+    // }
+    //
+    // var person1 = new Person('Joy')
+    // console.log(person1 instanceof Person)
+    // console.log(person1.constructor === Person)
+    // console.log(person1.constructor === Object)
+
+    Object.prototype.add = function (value) {
+        return this + value
+    };
+    var book = {
+        title: 'javascript'
+    };
+   var empty = {}
+   for (var property in empty) {
+       if (empty.hasOwnProperty(property)) {
+           console.log(property)
+       }
+   }
+</script>
+</html>

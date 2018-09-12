@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>b.com</div>
+<script>
+    // window.parent.document.getElementById("sogou_cookie").value=window.location.toString().substring(window.location.toString().indexOf("?")+1);
+    window.parent.document.cookie = window.location.toString().substring(window.location.toString().indexOf("?")+1);
+</script>
+</body>
+</html>

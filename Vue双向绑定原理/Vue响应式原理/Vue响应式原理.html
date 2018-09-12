@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+const data = {
+    name: 'Joy',
+    age: 24
+}
+
+function walk (data) {
+    // dep 数组就是我们所谓的"筐"
+    for (const key in data) {
+        const dep = [];
+        let val = data[key];
+        const nativeString = Object.prototype.toString.call(val)
+        if (nativeString === '[object, Object]') {
+            walk(val)
+        }
+        Object.defineProperty(data, key, {
+            set(newVal) {
+                if (newVal === val) return
+                val = newVal
+                dep.forEach(fn => fn())
+            },
+            get () {
+                dep.push(Target)
+                return val
+            }
+        })
+    }
+}
+    let Target= null
+    function $watch (exp, fn) {
+        Target = fn;
+        let pathArr,
+            obj = data
+        if (typeof exp === 'function') {
+            exp()
+            return
+        }
+        if (/\./.test(exp)) {
+            pathArr = exp.split('.')
+            pathArr.forEach(p => {
+                obj = obj[p]
+            })
+            return
+        }
+        data[exp];
+    }
+
+
+    function render () {
+        return document.write(`姓名：${data.name}; 年龄：${data.age}`)
+    }
+
+    $watch(render, render)
+</script>
+</html>

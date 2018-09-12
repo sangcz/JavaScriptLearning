@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>indexOf和lastIndexOf</title>
+</head>
+<body>
+
+</body>
+<script>
+    // indexOf 不存在返回-1
+    var arr = [1,2,3,4,5,6,7];
+
+    console.log(arr.indexOf(4)); // 3
+
+    // lastIndexOf  arr.lastIndexOf(searchElement[, fromIndex = arr.length - 1]) fromIndex = arr.length - 1 不存在返回-1
+    // 从此位置开始逆向查找。默认为数组的长度减 1，
+    // 即整个数组都被查找。如果该值大于或等于数组的长度，
+    // 则整个数组会被查找。如果为负值，将其视为从数组末尾向前的偏移。
+    // 即使该值为负，数组仍然会被从后向前查找。如果该值为负时，
+    // 其绝对值大于数组长度，则方法返回 -1，即数组不会被查找
+    console.log(arr.lastIndexOf(4)); // 3
+</script>
+</html>

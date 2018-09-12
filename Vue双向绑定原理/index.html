@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="a">
+    <span id="b"></span>
+    <script>
+        var obj = {};
+
+        Object.defineProperty(obj, 'hello',{
+            get: function () {
+                console.log('get方法被调用了');
+            },
+            set: function (newVal) {
+                document.getElementById('a').value = newVal;
+                document.getElementById('b').innerHTML = newVal;
+                console.log('set方法被调用了, 参数是' + newVal);
+            }
+        });
+        document.addEventListener('keyup', function (e) {
+            obj.hello = e.target.value;
+        })
+    </script>
+</body>
+</html>
