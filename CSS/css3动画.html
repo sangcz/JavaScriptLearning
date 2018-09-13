@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3动画</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #419641;
+            animation: move 1.5s;
+        }
+        @keyframes move {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(100px);
+                opacity: 1;
+            }
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background: #419641;
+            transition: 2s;
+        }
+        .box1:hover {
+            transform: translateX(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <!--<div class="box1"></div>-->
+</body>
+</html>

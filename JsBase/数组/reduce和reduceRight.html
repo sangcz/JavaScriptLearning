@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reduce和reduceRight</title>
+</head>
+<body>
+
+</body>
+<script>
+    // reduce 从头部开始遍历数组
+    var arr = [1,2,3,4,5];
+    var sum = arr.reduce(function (prev, curr, index, array) {
+        return prev + curr;
+    })
+    console.log(sum);
+
+
+    // reduceRight 和reduce方法完全一样，只是从尾部开始遍历数组
+    var arr1 = [1,2,3,4,5];
+    var sum1 = arr1.reduceRight(function (prev, curr, index, array) {
+        return prev + curr;
+    })
+    console.log(sum1);
+</script>
+</html>

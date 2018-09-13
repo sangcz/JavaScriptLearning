@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+<body>
+    <div id="box"></div>
+    <!--<div id="box1"></div>-->
+</body>
+<script>
+    function getTime() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth()+1; // 月份是从0开始，0即1月份
+        var day = date.getDate();  // 获取月份中的某一天
+        var week = date.getDay(); // date.getDay() 这个是获取星期几
+        var weekValue = '';
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        var seconds = date.getSeconds();
+
+        // 方法一
+        switch (week) {
+            case 0:
+                weekValue = '星期日';
+                break;
+            case 1:
+                weekValue = '星期一';
+                break;
+            case 2:
+                weekValue = '星期二';
+                break;
+            case 3:
+                weekValue = '星期三';
+                break;
+            case 4:
+                weekValue = '星期四';
+                break;
+            case 5:
+                weekValue = '星期五';
+                break;
+            case 6:
+                weekValue = '星期六';
+                break;
+        };
+        // 方法二
+        // var showWeek = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+
+        month < 10 ? month = '0'+month : month;
+        day < 10 ? day = '0'+day : day;
+        hour < 10 ? hour = '0'+hour : hour;
+        min < 10 ? min = '0'+min : min;
+        seconds < 10 ? seconds = '0'+seconds : seconds;
+        var nowTime = year+'-'+month+'-'+day+' '+ hour +':'+min+':'+seconds+' '+weekValue;
+        // var nowTime1 = year+'-'+month+'-'+day+' '+ hour +':'+min+':'+seconds+' '+showWeek[week];
+        document.getElementById('box').innerHTML = nowTime;
+        // document.getElementById('box1').innerHTML = nowTime1;
+        setTimeout('getTime();', 1000);
+    };
+    getTime();
+</script>
+</html>
