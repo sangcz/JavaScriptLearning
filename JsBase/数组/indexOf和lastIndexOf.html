@@ -9,9 +9,9 @@
 </body>
 <script>
     // indexOf 不存在返回-1
-    var arr = [1,2,3,4,5,6,7];
-
-    console.log(arr.indexOf(4)); // 3
+    // var arr = [1,2,3,4,5,6,7];
+    var arr = [1, 2, 2, 3, 4, 2, 2];
+    // console.log(arr.indexOf(4)); // 3
 
     // lastIndexOf  arr.lastIndexOf(searchElement[, fromIndex = arr.length - 1]) fromIndex = arr.length - 1 不存在返回-1
     // 从此位置开始逆向查找。默认为数组的长度减 1，
@@ -19,7 +19,16 @@
     // 则整个数组会被查找。如果为负值，将其视为从数组末尾向前的偏移。
     // 即使该值为负，数组仍然会被从后向前查找。如果该值为负时，
     // 其绝对值大于数组长度，则方法返回 -1，即数组不会被查找
-    console.log(arr.lastIndexOf(7, -1)); // 3
-    console.log(arr.lastIndexOf(6, -1)); // 3
+    // console.log(arr.lastIndexOf(7, -1)); // 3
+    // console.log(arr.lastIndexOf(6, -1)); // 3
+
+
+    function truncate(arr) {
+        let arr1 = arr.concat();
+        arr1.splice(arr1.length-1,1);
+        console.log(arr1);
+        return arr1;
+    }
+    truncate(arr);
 </script>
 </html>
