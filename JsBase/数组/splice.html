@@ -17,10 +17,20 @@
 
     // 插入 需指定三个参数
     arr2 = arr.splice(1,0,'red');
-    console.log(arr2);
+    console.log(arr);
 
     // 替换 需指定三个参数
     arr3 = arr.splice(1,1,'green');
     console.log(arr3);
+
+    var arr = [1, 2, 4, 4, 3, 4, 3];
+    function count(arr, item) {
+        let arr1 = arr.map((i)=>{
+            return i === item;
+        });
+        console.log(arr1);
+        return arr1.length;
+    }
+    count(arr,4);
 </script>
 </html>
