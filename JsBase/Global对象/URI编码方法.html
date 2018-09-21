@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URI编码方法</title>
+</head>
+<body>
+
+</body>
+<script>
+    var url = 'https://www.baidu.com/ index.html#start';
+
+    // encodeURI() 不会对本身属于URI的特殊字符进行编码，例如：冒号、正斜杠、问号、井号
+    var url1 = encodeURI(url);
+    console.log(encodeURI(url));
+
+    // encodeURIComponent() 则会对它发现的任何非标准字符进行编码
+    var url2 = encodeURIComponent(url);
+    console.log(encodeURIComponent(url));
+
+    // decodeURI()
+    console.log(decodeURI(url1));
+
+    // decodeURIComponent()
+    console.log(decodeURIComponent(url2));
+
+</script>
+</html>

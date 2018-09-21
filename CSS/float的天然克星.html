@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float的天然克星</title>
+    <style>
+        ul li {
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            background: red;
+            list-style: none;
+            float: left;
+        }
+        ul li:nth-of-type(3) {
+            clear: both;
+        }
+        ul li:nth-of-type(2) {
+            clear: both;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

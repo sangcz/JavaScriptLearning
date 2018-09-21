@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vertical-align</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 16px;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            background: red;
+        }
+        .box .arrow {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url("./../img/arrowDown.png") no-repeat 0 0;
+            background-size: 100%;
+            vertical-align: middle;
+        }
+        .box1 {
+            line-height: 32px;
+        }
+        .box1 > span {
+            font-size: 24px;
+            vertical-align: bottom;
+        }
+        .box2 {
+            height: 300px;
+            outline: 1px solid #aaa;
+            text-align: center;
+            line-height: 300px;
+        }
+        .box2 > img {
+            height: 256px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <!-- 内联元素的垂直水平居中 -->
+    <!--<div class="box">-->
+        <!--请选择 <i class="arrow"></i>-->
+    <!--</div>-->
+    <!--<div class="box1">-->
+        <!--<span>文字</span>-->
+    <!--</div>-->
+    <div class="box2">
+        <img src="https://avatar-static.segmentfault.com/297/234/2972341727-5b3dc45c08040_huge256" alt="">
+    </div>
+</body>
+</html>

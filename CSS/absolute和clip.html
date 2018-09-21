@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>absolute和clip</title>
+    <style>
+        div {
+            width: 256px;
+            height: 256px;
+            background: red;
+            position: fixed;
+            top: 0;
+            left: 0;
+            clip: rect(10px 20px 30px 20px);
+        }
+        .clip {
+            position: absolute;
+            clip: rect(0 0 0 0);
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <input type="submit" id="someId" class="clip">
+        <label for="someId">提交</label>
+    </form>
+</body>
+</html>

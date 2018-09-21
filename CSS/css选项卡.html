@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css选项卡</title>
+    <style>
+        .nav {
+            width: 300px;
+            border: solid 1px #ccc;
+        }
+        ul li {
+            display: inline-block;
+            text-align: center;
+            list-style: none;
+        }
+        #content1,
+        #content2{
+            display:none;
+        }
+
+        #content1:target,
+        #content2:target{
+            display:block;
+        }
+        #content1:target ~ .nav li {
+            &:first-child {
+                background: #ff7300;
+                color: #fff;
+             }
+        }
+        #content2:target ~ .nav li {
+            &:first-child {
+                 background: #ff7300;
+                 color: #fff;
+             }
+        }
+    </style>
+</head>
+<body>
+    <div id="content1">列表1内容:123456</div>
+    <div id="content2">列表2内容:abcdefgkijkl</div>
+    <ul class='nav'>
+        <li><a href="#content1">列表1</a></li>
+        <li><a href="#content2">列表2</a></li>
+    </ul>
+</body>
+</html>

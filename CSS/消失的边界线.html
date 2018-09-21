@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>消失的边界线</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .ul-container {
+            width: 300px;
+            margin: 50px auto;
+            background: #eee;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+        ul {
+            width: 300px;
+            margin-left: -1px;
+            font-size: 0;
+        }
+        li {
+            list-style: none;
+            text-align: center;
+            display: inline-block;
+            width: 99px;
+            font-size: 18px;
+            line-height: 30px;
+            border-left: solid 1px #999;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="ul-container">
+        <ul>
+            <li>测试</li>
+            <li>消失</li>
+            <li>边界线</li>
+            <li>右侧</li>
+            <li>边界线</li>
+            <li>消失</li>
+            <li>测试</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>overflow与锚点定位</title>
+    <style>
+        .con1 {
+            height: 800px;
+            background: #ccc;
+            margin-top: 40px;
+        }
+        .con2 {
+            width: 400px;
+            height: 200px;
+            background: red;
+            overflow: auto;
+        }
+        .con2 .child {
+            width: 200px;
+            height: 300px;
+            background: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#1">跳转1</a>
+        </li>
+        <li>
+            <a href="#2">跳转2</a>
+        </li>
+        <li>
+            <a href="#3">跳转3</a>
+        </li>
+        <li>
+            <a href="#5">跳转5</a>
+        </li>
+        <li>
+            <a href="#6">跳转6</a>
+        </li>
+    </ul>
+    <div id="1" class="con1">1</div>
+    <div id="2" class="con1">2</div>
+    <div id="3" class="con1">3</div>
+    <a href="javascript:void(0)">BackTop</a>
+    <div class="con2">
+        <div class="child"></div>
+        <div id="4">哈哈哈</div>
+    </div>
+    <a href="#4">点击测试!</a>
+    <div id="5" class="con1">5</div>
+    <div id="6" class="con1">6</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slice&substr&substring</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 这三个方法均不会修改字符串本身的值
+    // 如果没有传递第二个参数，则将字符串的末尾作为结束位置
+
+    var str = 'hello world';
+    // slice()
+    console.log(str.slice(3,4));
+    // 负值参数加上字符串的长度
+    console.log(str.slice(-3)); // 相当于str.slice(8)
+    console.log(str.slice(-3, -1)); // 相当于str.slice(8, 10)
+    console.log('--------1----------');
+
+    // substr()
+    // 第一个参数指定字符串开始位置
+    // 第二个参数指定返回的字符个数
+
+    // 第一个负值参数加上字符串的长度
+    console.log(str.substr(3,1));
+    console.log(str.substr(-3)); // 相当于str.substr(8)
+    // 第二个负值参数转换为0
+    console.log(str.substr(-3, -2)); // 相当于str.substr(8, 0), 所以返回空字符串
+    console.log('---------2---------');
+
+    // substring()
+    // 负值参数转换为0
+    console.log(str.substring(3,6));
+    console.log(str.substring(3,-3)); // 转换为str.substring(3,0) 相当于 str.substring(0,3)
+
+</script>
+</html>

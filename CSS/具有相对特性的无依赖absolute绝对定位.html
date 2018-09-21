@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>具有相对特性的无依赖absolute绝对定位</title>
+    <style>
+        .top1 {
+            position: absolute;
+        }
+        .icon-x {
+            line-height: 32px;
+            padding-left: 32px;
+            outline: solid 1px #ccc;
+        }
+        .icon-warn {
+            position: absolute;
+            margin-left: -32px;
+            width: 32px;
+            height: 32px;
+            background: url("./../img/gantan.png") no-repeat center;
+        }
+        .icon-hot {
+            position: absolute;
+            margin: -6px 0 0 2px;
+            width: 28px;
+            height: 11px;
+            color: red;
+        }
+        .follow {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img class="top1" src="https://demo.cssworld.cn//images/6/top1.png" alt="">
+        <img src="https://avatar-static.segmentfault.com/297/234/2972341727-5b3dc45c08040_huge256" alt="">
+    </div>
+    <!-- 图片文字水平对齐 -->
+    <!--<div class="icon-x">-->
+        <!--<i class="icon-warn"></i>邮箱格式不正确-->
+    <!--</div>-->
+    <div class="text">
+        热门导航<span class="icon-hot">Hot</span>
+    </div>
+    <div class="text">
+        新导航<span class="icon-hot">N</span>
+    </div>
+
+    <h3>标题 <span class="follow">span</span></h3>
+    <h3>标题 <div class="follow">div</div></h3>
+    <div>------------------------</div>
+    <h3>标题</h3><span class="follow">span</span>
+    <h3>标题</h3><div class="follow">div</div>
+</body>
+</html>

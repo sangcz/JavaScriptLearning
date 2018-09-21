@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计字符出现的频率</title>
+</head>
+<body>
+
+</body>
+<script>
+    var str = 'I like play basketball';
+    function count(str) {
+        var obj = {};
+        str.replace(/\S/g,function(s){
+            !obj[s] ? obj[s] = 1 : obj[s]++;
+        })
+        return obj;
+    }
+    var a = count(str);
+    console.log(a);
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>overflow与滚动条</title>
+    <style>
+        /* 在PC端，无论什么浏览器，默认滚动条均来自<html> */
+        /* 经过测试滚动栏宽度为17px */
+        html {
+            /*overflow: hidden;*/
+        }
+        .con {
+            width: 400px;
+            height: 300px;
+            overflow: auto;
+        }
+        .con .child {
+            height: 500px;
+            background: blue;
+        }
+        ::-webkit-scrollbar { /* 血槽宽度 */
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-thumb { /* 拖动条 */
+            background: rgba(0,0,0,0.3);
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-track { /* 背景槽 */
+            background: #ddd;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="child">
+            <div>11111</div>
+        </div>
+    </div>
+</body>
+<script>
+    var scrollTop = document.documentElement.scrollTop;
+    setTimeout(function () {
+        console.log(scrollTop);
+    }, 5000);
+    console.log(400 - document.getElementsByClassName('child')[0].clientWidth);
+
+</script>
+</html>

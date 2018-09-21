@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单行文字溢出点点点效果</title>
+    <style>
+        .ell {
+            width:200px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .ell-row-2 {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="ell">
+        单行文字溢出点点点效果单行文字溢出点点点效果单行文字溢出点点点效果
+    </div>
+    <div class="ell-row-2">
+        单行文字溢出点点点效果单行文字溢出点点点效果单行文字溢出点点点效果单行文字溢出点点点效果单行文字溢出点点点效果单行文字溢出点点点效果
+    </div>
+</body>
+</html>

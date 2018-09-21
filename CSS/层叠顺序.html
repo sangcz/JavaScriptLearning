@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层叠顺序</title>
+    <style>
+        .container {
+            position: relative;
+            background: #ddd;
+        }
+        .container > div {
+            width: 200px;
+            height: 200px;
+            opacity: 0.9;
+        }
+        .float {
+            float: left;
+            background: deeppink;
+        }
+        .inline-block {
+            display: inline-block;
+            background: yellowgreen;
+            margin-left: -100px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inline-block">#divA display: inline-block</div>
+        <div class="float">#divB float:left</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float与流体布局</title>
+    <style>
+        .box {
+            overflow: hidden;
+        }
+        .box > img {
+            width: 256px;
+            height: 256px;
+            float: left;
+            margin-bottom: 10px;
+        }
+        /* 使用场景：一侧定宽一侧自适应 */
+        .p {
+            margin-left: 266px;
+            /*clear: both;*/
+        }
+        .box1 {
+            overflow: hidden;
+        }
+        .box1 > img {
+            width: 256px;
+            height: 256px;
+            float: left;
+            margin-bottom: 10px;
+        }
+        /* 砌砖头式方案 */
+        .p1 {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://avatar-static.segmentfault.com/297/234/2972341727-5b3dc45c08040_huge256" alt="">
+        <p class="p">前端每日实战：138# 视频演示如何用纯 CSS 创作一张 iPhone 价格信息图</p>
+    </div>
+    <!--<div class="box1">
+        <img src="https://avatar-static.segmentfault.com/297/234/2972341727-5b3dc45c08040_huge256" alt="">
+        <p class="p1">前端每日实战：138# 视频演示如何用纯 CSS 创作一张 iPhone 价格信息图</p>
+    </div>-->
+</body>
+</html>

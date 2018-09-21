@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Math.PI
+    var a = Math.PI;
+    console.log(a);
+
+    // min() & max() 最小值，最大值
+    var min = Math.min(1,20,100);
+    console.log(min);
+
+    var max = Math.max(200, 102, 67);
+    console.log(max);
+
+    // 找到数组中的最大值最小值
+    var values = [1,2,3,4,5];
+    var max1 = Math.max.apply(Math, values);
+    console.log(max1);
+
+
+    // 舍入方法
+    // Math.ceil() 向上舍入
+    console.log(Math.ceil(25.9));
+    console.log(Math.ceil(25.1));
+    // Math.floor() 向下舍入
+    console.log(Math.floor(25.9));
+    console.log(Math.floor(25.1));
+    // Math.round() 标准舍入(四舍五入)
+    console.log(Math.round(25.9));
+    console.log(Math.round(25.5));
+    console.log(Math.round(25.4));
+
+    // random() 方法 返回大于等于0小于1的随机数
+    var num = Math.floor(Math.random() * 9 + 2);
+    console.log(num);
+
+</script>
+</html>

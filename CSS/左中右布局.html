@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左中右布局</title>
+    <style>
+        .prev {
+            float: left;
+        }
+        .next {
+            float: right;
+        }
+        /* 借助流体特性 保证不会和两个文字链接重叠 */
+        .title {
+            margin: 0 70px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#1" class="prev">&laquo;上一章</a>
+        <a href="#2" class="next">下一章&raquo;</a>
+        <h3 class="title">第112章 动物环绕</h3>
+    </div>
+</body>
+</html>

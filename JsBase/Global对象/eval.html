@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eval</title>
+</head>
+<body>
+
+</body>
+<script>
+    'use strict';
+    // 严格模式下在外部访问不到eval()中创建的任何变量和函数
+    // eval() 中传入的参数都会被当做ECMAScript语句来执行
+    // eval("alert('hi')");
+
+    // 传入函数
+    // eval() 中创建的任何变量或者函数都不会被提升, 因为在解析代码的时候, 它们被包含在一个字符串中, 它们只在eval()执行的时候创建
+    eval("function sayHi() {alert('hi')}");
+    sayHi();
+
+    eval("var msg = 'hello'");
+    alert(msg);
+
+    // 获得Global对象方法
+    var global = function () {
+        return this;
+    }();
+</script>
+</html>

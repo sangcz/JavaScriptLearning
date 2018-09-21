@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC</title>
+    <style>
+        .father {
+
+        }
+        .father > img {
+            float: left;
+            /*margin-right: 10px;*/
+            /*border-right: 10px solid transparent;*/
+            /*padding-right: 10px;*/
+        }
+        .animal {
+            overflow: hidden;
+            /*border-left: 10px solid transparent;*/
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <img src="https://avatar-static.segmentfault.com/297/234/2972341727-5b3dc45c08040_huge256" alt="">
+        <p class="animal">前端每日实战：138# 视频演示如何用纯 CSS 创作一张 iPhone 价格信息图</p>
+    </div>
+</body>
+</html>

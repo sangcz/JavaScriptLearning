@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取url参数</title>
+</head>
+<body>
+
+</body>
+<script>
+    // var sUrl = 'http://www.nowcoder.com?key=1&key=2&key=3&test=4#hehe';
+    // function getUrlParam(sUrl, sKey) {
+    //     var result = {};
+    //     var arr = [];
+    //     var param = sUrl.split('?')[1];
+    //     var param1 = param.split('&');
+    //     // 指定参数
+    //     if (sKey) {
+    //         param1.forEach(function (item) {
+    //             if (item.split('=')[0] === sKey ) {
+    //                 return item.split('=')[1];
+    //             } else {
+    //                 return '';
+    //             }
+    //         })
+    //     } else {
+    //         // 不指定参数
+    //         param1.forEach(function (item) {
+    //             result[item.split('=')[0]] = item.split('=')[1];
+    //         })
+    //     }
+    //     // 多个参数相同
+    //     param1.filter(function (item) {
+    //         if (item.split('=')[0] === sKey) {
+    //             arr.push(item.split('=')[1]);
+    //         }
+    //     })
+    //     console.log(param);
+    //     console.log(param1);
+    //     console.log(result);
+    //     console.log(arr);
+    // }
+    // getUrlParam(sUrl);
+    // function getUrlParam(sUrl,sKey){
+    //     var result = {};
+    //     sUrl.replace(/\??(\w+)=(\w+)&?/g,function(a,k,v){
+    //         if(result[k] !== void 0){
+    //             var t = result[k];
+    //             result[k] = [].concat(t,v);
+    //         }else{
+    //             result[k] = v;
+    //         }
+    //     });
+    //     if(sKey === void 0){
+    //         return result;
+    //     }else{
+    //         return result[sKey] || '';
+    //     }
+    // }
+</script>
+</html>
