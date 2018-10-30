@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mousewheel鼠标滚轮事件</title>
+    <style>
+        .box {
+            height: 4000px;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+<script>
+    document.addEventListener('mousewheel', function (ev) {
+        console.log(ev.wheelDelta)
+        console.log(ev)
+    })
+</script>
+</html>

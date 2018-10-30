@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function baz() {
+        debugger
+        console.log('baz');
+        // bar();
+    }
+
+    function bar() {
+        console.log('bar');
+        foo();
+    }
+
+    function foo() {
+        console.log('foo');
+    }
+
+    baz();
+</script>
+</html>

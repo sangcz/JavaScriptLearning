@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function dealData (val) {
+        val = String(val)
+        let itemLen = String(val).slice(val.toString().indexOf('.'))
+        if (val.toString().indexOf('.') === -1) {
+            val = val+'.0000'
+        }
+        if (itemLen.length === 2) {
+            val = val+'000'
+        } else if (itemLen.length === 3) {
+            val = val+'00'
+        } else if (itemLen.length === 4) {
+            val = val+'0'
+        } else if (itemLen.length === 5) {
+            return val
+        }
+        return val
+    }
+    console.log(dealData(123))
+    console.log(dealData(123.4))
+    console.log(dealData(123.41))
+    console.log(dealData(123.42))
+    console.log(dealData(123.423))
+    console.log(dealData(123.4238))
+</script>
+</body>
+</html>
