@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object键值对</title>
+</head>
+<body>
+
+</body>
+<script>
+    var array = [1, 2, 1, 1, '1'];
+
+    function unique(array) {
+        var obj = {};
+        return array.filter(function (item, index, array) {
+            return obj.hasOwnProperty(typeof item + JSON.stringify(item)) ? false : (obj[typeof item + JSON.stringify(item)] = true)
+        })
+    }
+
+    console.log(unique(array));
+</script>
+</html>

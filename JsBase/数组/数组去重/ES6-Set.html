@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6-Set</title>
+</head>
+<body>
+
+</body>
+<script>
+    var array = [1, 2, 1, 1, '1'];
+
+    // function unique(array) {
+    //     return Array.from(new Set(array));
+    // }
+
+    // 简化版
+    // function unique(array) {
+    //     return [...new Set(array)]
+    // }
+
+    // var unique = (a) => [...new Set(a)]
+
+
+    // 使用Map
+    function unique (arr) {
+        const seen = new Map()
+        return arr.filter((a) => !seen.has(a) && seen.set(a, 1))
+    }
+    console.log(unique(array)); // [1, 2, "1"]
+</script>
+</html>
