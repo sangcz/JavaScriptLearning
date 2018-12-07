@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise链的返回值</title>
+</head>
+<body>
+
+</body>
+<script>
+    let p1 = new Promise(function (resolve, reject) {
+        resolve(42);
+    });
+
+    p1.then(function (value) {
+        console.log(value);
+        return value + 1;
+    }).then(function (value) {
+        console.log(value);
+        return value + 100
+    }).then(function (value) {
+        console.log(value);
+    });
+</script>
+</html>

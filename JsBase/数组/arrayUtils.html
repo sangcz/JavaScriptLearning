@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arrayUtils</title>
+</head>
+<body>
+
+</body>
+<script>
+    const arrayUtils = {
+        // methods
+        // 末尾添加
+        append(array, ...elements) {
+            array.push(...elements)
+            return array
+        },
+        // 首位添加
+        prepend (array, ...elements) {
+            array.unshift(...elements)
+            return array
+        },
+        // 任意位置插入
+        insert (array, index, ...elements) {
+            array.splice(index, 0, ...elements)
+            return array
+        },
+        // 移除
+        remove (array, index) {
+            array.splice(index, 1)
+            return array
+        }
+    }
+    // 使用
+    const array =[1,2,3]
+    arrayUtils.append(array, 4,5);
+    arrayUtils.remove(array, 1);
+    console.log(array)
+</script>
+</html>

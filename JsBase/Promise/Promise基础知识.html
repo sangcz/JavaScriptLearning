@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise基础知识</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 事件模型
+    // 回调模式
+    /*Promise的生命周期*/
+    // let promise = new Promise(function (resolve, reject) {
+        // console.log("Promise");
+        // reject();
+        // throw new Error('Explosion!');
+    // });
+    let rejected = Promise.reject(42);
+
+    console.log('Hi!');
+
+    // promise.catch(function (err) {
+    //     console.log(err.message);
+    // });
+
+    // console.log('Hi!');
+    rejected.catch(function (value) {
+        console.log(value);
+    })
+</script>
+</html>

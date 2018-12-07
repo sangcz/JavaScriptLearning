@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浏览器环境的拒绝处理</title>
+</head>
+<body>
+
+</body>
+<script>
+    let rejected;
+
+    window.addEventListener('unhandledrejection',function (event) {
+        console.log(event.type);
+        console.log(event.reason.message);
+        console.log(rejected === event.promise);
+    });
+
+    // window.addEventListener('rejectionhandled', function (event) {
+    //     console.log(event.type);
+    //     console.log(event.reason.message);
+    //     console.log(rejected === event.promise);
+    // });
+
+    rejected = Promise.reject(new Error("Explosion!"));
+</script>
+</html>

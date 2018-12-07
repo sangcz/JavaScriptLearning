@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vh和vw</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html {
+            font-size: calc(112.5% + 4 / 400 * (100vw - 600px))
+        }
+       .box {
+           width: 100vw;
+           height: 20vh;
+           background: red;
+           color: #fff;
+       }
+    </style>
+</head>
+<body>
+    <div class="box">我是VH,VW</div>
+</body>
+<script>
+    console.log(window.innerWidth);
+    console.log(window.innerHeight);
+</script>
+</html>
